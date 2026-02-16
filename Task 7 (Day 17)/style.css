@@ -38,7 +38,7 @@ html, body{
 
 .card img{
     height: 100%;
-    width: 100%;
+    width: 100%; 
     object-fit: cover;
 }
 
@@ -126,4 +126,11 @@ input{
     outline: none;
     background-color: transparent;
     font-size: 15px;
+}
+
+#nav h1{
+    color: transparent;
+    background-image: url(https://i.pinimg.com/originals/14/e9/c1/14e9c1fa08891b41f23b7cdd02904c0e.gif);
+    background-size: cover;
+    background-clip: text;
 }
