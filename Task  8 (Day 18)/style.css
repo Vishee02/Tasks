@@ -15,13 +15,14 @@ main{
     background-color: black;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 70px 1fr 1fr;
+    grid-template-rows: 70px 1fr 0.5fr 0.5fr;
     grid-gap: 10px;
     padding: 5px;
 
     grid-template-areas:"header header header"
                         "section section section"
                         "div1 div2 div3"
+                        "div1 div4 div3"
     ;
 }
 
@@ -48,3 +49,9 @@ section{
     grid-area: div3;
     background-color: yellow;
 }
+
+#div4{
+    grid-area: div4;
+    background-color: yellow;
+}
+
