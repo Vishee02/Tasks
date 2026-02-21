@@ -6,4 +6,55 @@
 html, body {
   height: 100%;
   width: 100%;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  background-color: darkblue;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr 1fr;
+  grid-template-areas: "body body2 body2 body2" "body body2 body2 body2" "body footer1 footer2 footer3" "body footer1 footer2 footer3";
+}
+main .body {
+  border: 15px solid black;
+  grid-area: body;
+  background-color: white;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .body2 {
+  border: 15px solid black;
+  grid-area: body2;
+  background-color: black;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #footer1 {
+  border: 15px solid black;
+  grid-area: footer1;
+  background-color: red;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #footer2 {
+  border: 15px solid black;
+  grid-area: footer2;
+  background-color: green;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #footer3 {
+  border: 15px solid black;
+  grid-area: footer3;
+  background-color: yellow;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
