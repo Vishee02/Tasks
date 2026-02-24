@@ -47,6 +47,8 @@ main{
                 border-radius: 10px;
             }
         }
+
+        
         .bottom{
             background-color: #292929;
             border-radius: 10px;
@@ -80,7 +82,10 @@ main{
     }
 }
 
+
+
 @media (min-width: 900px){
+
     main{
         section{
             flex-direction: row;
@@ -108,3 +113,4 @@ main{
         }
     }
 }
+
