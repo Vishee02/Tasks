@@ -25,9 +25,6 @@ html{
     gap: $gap;
 }
 
-section{
-    max-width: 2000px;
-}
 
 main{
     width: 100%;
@@ -35,6 +32,10 @@ main{
     align-items: center;
 
     section{
+    max-width: 2000px;
+    }
+
+    section.view1{
         width: 100%;
         @include flex-center(1rem);
         padding: 1rem;
@@ -82,12 +83,57 @@ main{
     }
 }
 
+    section.view2{
+        //@include flex-column(2.5rem);
+        width: 100%;
+        padding: 1rem 4rem;
 
+
+        .top, .bottom{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+
+            .element{
+                text-align: center;
+                //@include flex-column(0.2rem);
+                
+                small{
+                    opacity: 0.6;
+                }
+                
+                h2{
+                font-size: 3rem;
+                font-weight: 300;
+                }
+            }
+
+        }
+    }
+
+    section.view3{
+        width: 100%;
+        padding: 1rem;
+
+        .top{
+            width: 100%;
+
+            img{
+                width: 100%;
+                border-radius: 0.7rem;
+            }
+        }
+
+        .bottom{
+            background-color: #292929;
+            border-radius: 0.7rem;
+        }
+    }
 
 @media (min-width: 900px){
 
     main{
-        section{
+        section.view1{
             flex-direction: row;
             padding: 1rem 4rem;
 
@@ -110,6 +156,11 @@ main{
                     }
                 }
             }
+        }
+
+        section.view2{
+            flex-direction: row;
+            padding: 1rem 4rem;
         }
     }
 }
