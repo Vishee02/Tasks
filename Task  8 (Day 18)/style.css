@@ -6,52 +6,7 @@
 html, body{
     height: 100%;
     width: 100%;
-
+    background-color: darkaquamarine;
 }
 
-main{
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 70px 1fr 0.5fr 0.5fr;
-    grid-gap: 10px;
-    padding: 5px;
-
-    grid-template-areas:"header header header"
-                        "section section section"
-                        "div1 div2 div3"
-                        "div1 div4 div3"
-    ;
-}
-
-header{
-    background-color: red;
-    grid-area: header;
-}
-
-section{
-    background-color: green;
-    grid-area: section;
-}
-#div1{
-    grid-area: div1;
-    background-color: brown;
-}
-
-#div2{
-    grid-area: div2;
-    background-color: blue;
-}
-
-#div3{
-    grid-area: div3;
-    background-color: yellow;
-}
-
-#div4{
-    grid-area: div4;
-    background-color: yellow;
-}
 

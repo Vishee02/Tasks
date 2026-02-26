@@ -25,6 +25,12 @@ html{
     gap: $gap;
 }
 
+@mixin flex-column($gap: 0rem){
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
 
 main{
     width: 100%;
@@ -48,16 +54,96 @@ main{
                 border-radius: 10px;
             }
         }
-
-        
         .bottom{
             background-color: #292929;
             border-radius: 10px;
             padding: 1.5rem;
-            @include flex-center(3rem);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
 
             .text{
-                @include flex-center(0.5rem);
+                display:flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                h1{
+                    font-weight: 200;
+                    font-size: 2.5rem;
+                    text-transform: uppercase;
+                }
+                
+                p{
+                    font-weight: 300;
+                    opacity: 0.6;
+                    line-height: 1.5;
+                }
+
+                button{
+                    width: fit-content;
+                    border: none;
+                    outline: none;
+                    padding: 0.75rem 1rem;
+                    border-radius: 0.5rem;
+                }
+            }
+        }
+    }
+
+    section.view2{
+        @include flex-column(2.5rem);
+        width: 100%;
+        padding: 1rem 4rem;
+
+
+        .top, .bottom{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+
+            .element{
+                text-align: center;
+                @include flex-column(0.2rem);
+                
+                small{
+                    opacity: 0.6;
+                }
+                
+                h2{
+                font-size: 3rem;
+                font-weight: 300;
+                }
+            }
+
+        }
+    }
+
+    section.view3{
+        width: 100%;
+        padding: 1rem;
+        @include flex-column(1rem);
+
+        .top{
+            width: 100%;
+
+            img{
+                width: 100%;
+                border-radius: 0.7rem;
+            }
+        }
+
+        .bottom{
+            background-color: #292929;
+            border-radius: 10px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .text{
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
 
                 h1{
                     font-weight: 200;
@@ -83,53 +169,6 @@ main{
     }
 }
 
-    section.view2{
-        //@include flex-column(2.5rem);
-        width: 100%;
-        padding: 1rem 4rem;
-
-
-        .top, .bottom{
-            display: flex;
-            width: 100%;
-            justify-content: space-around;
-
-            .element{
-                text-align: center;
-                //@include flex-column(0.2rem);
-                
-                small{
-                    opacity: 0.6;
-                }
-                
-                h2{
-                font-size: 3rem;
-                font-weight: 300;
-                }
-            }
-
-        }
-    }
-
-    section.view3{
-        width: 100%;
-        padding: 1rem;
-
-        .top{
-            width: 100%;
-
-            img{
-                width: 100%;
-                border-radius: 0.7rem;
-            }
-        }
-
-        .bottom{
-            background-color: #292929;
-            border-radius: 0.7rem;
-        }
-    }
-
 @media (min-width: 900px){
 
     main{
@@ -148,7 +187,7 @@ main{
                 .text{
                     gap: 1.5rem;
                     h1{
-                        font-size: 3.5 rem;
+                        font-size: 3.5rem;
                     }
                     p{
                         width: 60%;
@@ -161,6 +200,31 @@ main{
         section.view2{
             flex-direction: row;
             padding: 1rem 4rem;
+        }
+
+        section.view3{
+            flex-direction: row;
+            padding: 1rem 4rem;
+
+            .top, .bottom{
+                width: 50%;
+            }
+
+            .bottom{
+                justify-content: space-between;
+                padding: 3rem;
+
+                .text{
+                    gap: 1.5rem;
+                    h1{
+                        font-size: 3.5rem;
+                    }
+                    p{
+                        width: 80%;
+                        font-size: 1rem;
+                    }
+                }
+            }
         }
     }
 }
