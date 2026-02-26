@@ -1,60 +1,62 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
     height: 100%;
     width: 100%;
 }
 
-body{
+body {
     background-color: #1d1d1d;
 }
 
-html{
+html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: rgb(244,244,244);
+    color: rgb(244, 244, 244);
     font-size: clamp(14px, 1vw, 18px);
 }
 
-@mixin flex-center($gap: 0rem){
+@mixin flex-center($gap: 0rem) {
     display: flex;
     flex-direction: column;
     gap: $gap;
 }
 
-@mixin flex-column($gap: 0rem){
+@mixin flex-column($gap: 0rem) {
     display: flex;
     flex-direction: column;
     gap: $gap;
 }
 
 
-main{
+main {
     width: 100%;
     @include flex-center(0rem);
     align-items: center;
 
-    section{
-    max-width: 2000px;
+    section {
+        max-width: 2000px;
     }
 
-    section.view1{
+    section.view1 {
         width: 100%;
         @include flex-center(1rem);
         padding: 1rem;
 
-        .top{
+        .top {
             width: 100%;
 
-            img{
+            img {
                 width: 100%;
                 border-radius: 10px;
             }
         }
-        .bottom{
+
+        .bottom {
             background-color: #292929;
             border-radius: 10px;
             padding: 1.5rem;
@@ -62,24 +64,24 @@ main{
             flex-direction: column;
             gap: 1.5rem;
 
-            .text{
-                display:flex;
+            .text {
+                display: flex;
                 flex-direction: column;
                 gap: 0.5rem;
 
-                h1{
+                h1 {
                     font-weight: 200;
                     font-size: 2.5rem;
                     text-transform: uppercase;
                 }
-                
-                p{
+
+                p {
                     font-weight: 300;
                     opacity: 0.6;
                     line-height: 1.5;
                 }
 
-                button{
+                button {
                     width: fit-content;
                     border: none;
                     outline: none;
@@ -90,49 +92,50 @@ main{
         }
     }
 
-    section.view2{
+    section.view2 {
         @include flex-column(2.5rem);
         width: 100%;
         padding: 1rem 4rem;
 
 
-        .top, .bottom{
+        .top,
+        .bottom {
             display: flex;
             width: 100%;
             justify-content: space-around;
 
-            .element{
+            .element {
                 text-align: center;
                 @include flex-column(0.2rem);
-                
-                small{
+
+                small {
                     opacity: 0.6;
                 }
-                
-                h2{
-                font-size: 3rem;
-                font-weight: 300;
+
+                h2 {
+                    font-size: 3rem;
+                    font-weight: 300;
                 }
             }
 
         }
     }
 
-    section.view3{
+    section.view3 {
         width: 100%;
         padding: 1rem;
         @include flex-column(1rem);
 
-        .top{
+        .top {
             width: 100%;
 
-            img{
+            img {
                 width: 100%;
                 border-radius: 0.7rem;
             }
         }
 
-        .bottom{
+        .bottom {
             background-color: #292929;
             border-radius: 10px;
             padding: 1.5rem;
@@ -140,24 +143,24 @@ main{
             flex-direction: column;
             gap: 1.5rem;
 
-            .text{
+            .text {
                 display: flex;
                 flex-direction: column;
                 gap: 0.5rem;
 
-                h1{
+                h1 {
                     font-weight: 200;
                     font-size: 2.5rem;
                     text-transform: uppercase;
                 }
-                
-                p{
+
+                p {
                     font-weight: 300;
                     opacity: 0.6;
                     line-height: 1.5;
                 }
 
-                button{
+                button {
                     width: fit-content;
                     border: none;
                     outline: none;
@@ -167,29 +170,85 @@ main{
             }
         }
     }
+
+    section.view4 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 0.7rem;
+
+        .card{
+            border-radius: 0.7rem;
+            width: 100%;
+            background-image: url(https://cdn.prod.website-files.com/675580c86a09d65d0bef3486/675580c86a09d65d0bef355d_team-01.webp);
+            background-size: cover;
+            aspect-ratio: 1/1;
+
+            @include flex-column(0rem);
+            justify-content: space-between;
+            padding: 1rem;
+
+            .icon, .bottom {
+                background-color: rgba(187, 187, 187, 0.375);
+                backdrop-filter: blur(5px);
+                border: 1px solid white;
+                border-radius: 0.7rem;
+                padding: 0.5rem;
+            }
+
+            .top {
+                display: flex;
+                gap: 1rem;
+                justify-content: flex-end;
+            }
+
+            .icon{
+                width: fit-content;
+                border-radius: 100%;
+                margin-top: 0.5rem;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+
+            .bottom {
+                display: flex;
+                justify-content: space-between;
+                padding: 2rem 1rem;
+
+                p{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
 }
 
-@media (min-width: 900px){
+@media (min-width: 900px) {
 
-    main{
-        section.view1{
+    main {
+        section.view1 {
             flex-direction: row;
             padding: 1rem 4rem;
 
-            .top, .bottom{
+            .top,
+            .bottom {
                 width: 50%;
             }
 
-            .bottom{
+            .bottom {
                 justify-content: space-between;
                 padding: 3rem;
 
-                .text{
+                .text {
                     gap: 1.5rem;
-                    h1{
+
+                    h1 {
                         font-size: 3.5rem;
                     }
-                    p{
+
+                    p {
                         width: 60%;
                         font-size: 1rem;
                     }
@@ -197,35 +256,49 @@ main{
             }
         }
 
-        section.view2{
+        section.view2 {
             flex-direction: row;
             padding: 1rem 4rem;
         }
 
-        section.view3{
-            flex-direction: row;
+        section.view3 {
+            flex-direction: row-reverse;
             padding: 1rem 4rem;
 
-            .top, .bottom{
+            .top,
+            .bottom {
                 width: 50%;
             }
 
-            .bottom{
+            .bottom {
                 justify-content: space-between;
                 padding: 3rem;
 
-                .text{
+                .paragraph {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                }
+
+                .text {
                     gap: 1.5rem;
-                    h1{
-                        font-size: 3.5rem;
+
+                    h1 {
+                        font-size: 2.5rem;
                     }
-                    p{
+
+                    p {
+                        display: flex;
                         width: 80%;
                         font-size: 1rem;
                     }
                 }
             }
         }
+
+        section.view4 {
+            flex-direction: row;
+            padding: 1rem 4rem;
+        }
     }
 }
-
