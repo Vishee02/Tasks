@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: lavender;
+}
+.header { 
+    color:white; 
+    background-color: indigo;
+    box-sizing: content-box;
+    font-size: 30px; 
+    text-align: center;
+}
+p2 {
+    font-size: 25px;
+    margin: 20px;
+    line-height: 1.6;
+    font-style: italic;;
+}
+.about-me {
+    box-sizing: content-box;
+    margin: 20px;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    text-align: center;
+}
+.education {
+    box-sizing: content-box;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(178, 233, 255);
+    border-radius: 10px;
+    text-align: center;
+}
+.skills {
+    box-sizing: content-box;
+    margin: 20px;
+    padding: 20px;
+    background-color:lightyellow;
+    border-radius: 10px;
+    text-align: center;
+}
+.projects {
+    box-sizing: content-box;
+    margin: 20px;
+    padding: 20px;
+    background-color: orchid;
+    border-radius: 10px;
+    text-align: center;
+}
+.contact {
+    box-sizing: content-box;
+    margin: 20px;
+    padding: 20px;
+    background-color: fuchsia;
+    border-radius: 10px;
+    text-align: center;
+}
+h2 {
+    color: black;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+p {
+    font-size: 20px;
+    margin: 5px;
+    line-height: 3;
+    box-sizing: content-box;
+    background-color: white;
+    padding: 2px;
+    border-radius: 2px;
+    text-align: center;
+}
+   
+p1 {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px auto;
+    line-height: 3;
+    box-sizing: content-box;
+    background-color: white;
+    padding: 2px;
+    border-radius: 2px;
+    text-align: center;
+}
